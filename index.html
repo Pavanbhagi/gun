@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron & Steel | Premium Firearms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">IRON & STEEL</div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search models (e.g. Glock)..." onkeyup="searchGuns()">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="cart-icon">🛒 <span id="cart-count">0</span></div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Quality & Precision</h1>
+            <p>Your trusted source for firearms, ammunition, and expert training.</p>
+            <button class="cta-btn" onclick="document.getElementById('inventory-section').scrollIntoView()">View Inventory</button>
+        </div>
+    </header>
+
+    <section class="products" id="inventory-section">
+        <div class="section-header">
+            <h2>Our Inventory</h2>
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterSelection('all', this)">All</button>
+                <button class="filter-btn" onclick="filterSelection('Pistol', this)">Pistols</button>
+                <button class="filter-btn" onclick="filterSelection('Rifle', this)">Rifles</button>
+                <button class="filter-btn" onclick="filterSelection('Shotgun', this)">Shotguns</button>
+            </div>
+        </div>
+        <div class="product-grid" id="product-container">
+            </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Iron & Steel Firearms. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
