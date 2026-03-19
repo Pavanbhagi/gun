@@ -3,21 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iron & Steel | Premium Firearms</title>
+    <title>Iron & Steel | Premium Firearms & Pellets</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="cart-sidebar" class="sidebar">
-        <div class="sidebar-header">
-            <h2>Your Cart</h2>
-            <button class="close-btn" onclick="toggleCart()">×</button>
-        </div>
-        <div id="cart-items"></div>
-        <div class="sidebar-footer">
-            <h3>Total: $<span id="cart-total">0</span></h3>
-            <button class="checkout-btn">Proceed to Checkout</button>
-        </div>
-    </div>
 
     <nav class="navbar">
         <div class="logo">IRON & STEEL</div>
@@ -32,18 +22,11 @@
         <div class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
     </nav>
 
-    <div id="product-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">×</span>
-            <div id="modal-body" class="modal-flex"></div>
-        </div>
-    </div>
-
     <header class="hero">
         <div class="hero-overlay">
             <div class="hero-content">
                 <h1>Quality & Precision</h1>
-                <p>India's trusted source for firearms, precision air pellets, and expert training.</p>
+                <p>India's trusted source for premium firearms, precision air pellets, and expert training.</p>
                 <button class="cta-btn" onclick="document.getElementById('inventory-section').scrollIntoView()">View Inventory</button>
             </div>
         </div>
@@ -51,36 +34,37 @@
 
     <section class="products" id="inventory-section">
         <div class="section-header">
-            <h2>Our Inventory</h2>
+            <h2>Premium Selection</h2>
             <div class="filters">
                 <button class="filter-btn active" onclick="filterSelection('all', this)">All</button>
                 <button class="filter-btn" onclick="filterSelection('Pistol', this)">Pistols</button>
-                <button class="filter-btn" onclick="filterSelection('Rifle', this)">Rifles</button>
                 <button class="filter-btn" onclick="filterSelection('Pellets', this)">Air Pellets</button>
             </div>
         </div>
-        <div class="product-grid" id="product-container">
+        <div id="product-container" class="product-grid">
             </div>
     </section>
 
     <section class="contact-section" id="contact">
         <div class="contact-container">
-            <div class="contact-form">
-                <h2>Contact Our Experts</h2>
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+                <p>Visit our range or consult with our ballistic experts.</p>
+                <div class="map-box">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.75775107055!2d78.43206607596701!3d17.42342300108993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9734e34e5659%3A0x696f5b9000a4000c!2sBanjara%20Hills%2C%20Hyderabad!5e0!3m2!1sen!2sin!4v1710000000000" width="100%" height="250" style="border:0; filter: grayscale(1) invert(1);" allowfullscreen=""></iframe>
+                </div>
+            </div>
+            <form class="contact-form">
                 <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
-                <textarea placeholder="Tell us about your requirements..."></textarea>
-                <button class="cta-btn">Send Message</button>
-            </div>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121812.40424590393!2d78.34863920979435!3d17.43048868779836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78362ef9542!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" width="100%" height="350" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Your Inquiry..."></textarea>
+                <button type="submit" class="cta-btn">Send Message</button>
+            </form>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Iron & Steel Firearms India. All rights reserved.</p>
-        <p style="font-size: 0.7rem; color: #444; margin-top: 10px;">Licensed Dealer. All legal protocols strictly followed.</p>
+        <p>&copy; 2026 Iron & Steel India. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
